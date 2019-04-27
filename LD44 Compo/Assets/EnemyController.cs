@@ -35,24 +35,39 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
 
         if (dodging)    //TODO: alert enemy when firing that he should dodge
         {
             //TODO: sidestep from vector between player and enemy
+            //TODO: raycast to check wich way to dodge so won't hit a wall or another enemy?
         }
         else
         {
             if (SeesPlayer)
             {
+                //look at player. Scare the sh%t out of him (her?) :D
+                LookTowardsPoint(player.transform.position);
+
                 if (PlayerInFireRange)
                 {
-                    // TODO: fire
+                    //fire at player
+                    StopMoving();
+                    Fire(player.transform.position);
+                    //TODO: randomize point around the player a little to give more chances to hit him
                 }
                 else
                 {
-                    //TODO: move towards player
+                    //move towards player
+                    MoveTowardsPoint(player.transform.position);
                 }
+            }
+            else
+            {
+                //wander around aimlessly waiting for player
+
+                //TODO: wander around aimelessly 
+                //TODO: raycast randomly to check for furthest wall and go there
+                //TODO: randomly stop
             }
         }
     }
@@ -73,8 +88,10 @@ public class EnemyController : MonoBehaviour
             torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 2);
         }
 
+        Vector2 fireDirection = (targetPoint - (Vector2)shootingOriginPoint.position).normalized;
+
         //fire towards given point
-        weaponToFire.Fire(shootingOriginPoint.position, targetPoint);
+        weaponToFire.Fire(shootingOriginPoint.position, fireDirection);
 
     }
 
@@ -95,7 +112,7 @@ public class EnemyController : MonoBehaviour
         return weaponToFire;
     }
 
-    public void MoveTowardsPoint()
+    public void MoveTowardsPoint(Vector2 targetPoint)
     {
 
     }
@@ -103,6 +120,13 @@ public class EnemyController : MonoBehaviour
     public void StopMoving()
     {
         rb.velocity = Vector2.zero;
+    }
+
+    public void LookTowardsPoint(Vector2 targetPoint)
+    {
+        Vector3 dir = (targetPoint - (Vector2)transform.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+        torsoAnimator.gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     public bool PlayerInFireRange
