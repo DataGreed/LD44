@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour
     public float speed = 1.0f;
     public Weapon primaryWeapon;    //don't use prefabs here, they won;t work.
     public Weapon secondaryWeapon;
+    public Transform shootingOriginPoint;
+
+    public Animator torsoAnimator;
+    public Animator legsAnimator;
+
+    public const string FIRING_WEAPON_ANIMATION_PARAMETER= "firingWeapon";
 
     void FixedUpdate()
     {   
@@ -25,6 +31,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButton("Fire1"))
         {
             Fire();
+        }
+        else
+        {
+            torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
         }
     }
 
@@ -45,8 +55,19 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // choose proper animation for primary or secondary weapon
+        // FIXME: don;t assume that primary is always a pistol
+        if (weaponToFire==primaryWeapon)
+        {
+            torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 1);
+        }
+        else
+        {
+            torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 2);
+        }
+
         //fire towards cursor
-        weaponToFire.Fire(transform.position, GetMouseDirection());
+        weaponToFire.Fire(shootingOriginPoint.position, GetMouseDirection());
 
     }
 }

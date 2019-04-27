@@ -52,6 +52,8 @@ x two-stick movement of player character
 
 # Nice to have
 - graphic: tube connecting tanks to mask
+- graphic: bullet collision with wall
+- graphic bullet disappear due to range
 
 # Out of scope
 - gamepad controls
@@ -78,10 +80,13 @@ x Implement shooting with default weapon (pistol projectile/unlimited)
 - Player walk animation
 - Implement enemies
 - Kill enemies
+- Bullet collision with walls
 - Enemy AI
 - Death animation 
 	- lack of oxygen
 	- shot
+- Hit animation
+	- blood splatter?
 - Oxygen depleting
 - Oxygen tank sprite
 - Oxygen tank dropping from enemies

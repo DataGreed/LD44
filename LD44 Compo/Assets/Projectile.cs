@@ -23,7 +23,6 @@ public class Projectile : MonoBehaviour
         float angle = Mathf.Atan2(startingDirection.y, startingDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        //TODO: remember originating point to count distance travelled
         startPoint = transform.position;
 
         //fire only if not fired yet
@@ -31,7 +30,9 @@ public class Projectile : MonoBehaviour
         {
             rb = GetComponent<Rigidbody2D>();
             rb.velocity = startingDirection * startingSpeed;
+            shot = true;
         }
+
     }
 
     // Update is called once per frame
