@@ -50,10 +50,15 @@
 - arena items
  - droppable oxygen tanks
 
+# Out of scope
+- gamepad controls
+- instant kill my shooting oxygen tank (explosion, enemy leaves no tank behind)
+- dynamic lighting
+- flamethrower
 
 
 # Name ideas
-- till breath do us apart
+- till breath do us apart (save the "princess" at the end?)
 - oxygen arena
 - last breath
 - get some air
@@ -63,6 +68,18 @@
 
 # Plan
 
-- Top Down Character sprite (torso and legs, like in GTA1-GTA2)
-- Implement two-stick controls (legs rotate to movement direction, torso to second stick/mouse)
+x Top Down Character sprite (torso and legs, like in GTA1-GTA2)
+x Implement crimson-land-like controls
 - Implement shooting with default weapon (pistol projectile/unlimited)
+	- Animation
+- Player walk animation
+- Implement enemies
+- Death animation 
+	- lack of oxygen
+	- shot
+- Oxygen depleting
+- Oxygen tank sprite
+- Oxygen tank dropping from enemies
+- Oxygen tank pickup mechanic
+- Enemy AI
+- Armor mechanic
