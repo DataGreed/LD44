@@ -17,21 +17,21 @@ x two-stick movement of player character
  - weapon name
  - ammo left
 - weapons characteristics:
- - type of weapon (only projectile for this project due to limited time)
- - range
- - fire rate (time between shots)
- - projectile speed
+ x type of weapon (only projectile for this project due to limited time)
+ x range
+ x fire rate (time between shots)
+ x projectile speed
  - number of projectiles per burst
- - spread (applied to individual projectiles)
+ x spread (applied to individual projectiles)
  - damage
  - default amount of ammo
 - store	
 	- buying items
 		- weapons
-			- shotgun
-			- smg
-			- carabiner
-			- rifle
+			x shotgun
+			x smg
+			x carabiner
+			x rifle
 		- ammo
 		- armor shards
 		- speed upgrade
@@ -73,7 +73,7 @@ x two-stick movement of player character
 
 x Top Down Character sprite (torso and legs, like in GTA1-GTA2)
 x Implement crimson-land-like controls
-- Implement shooting with default weapon (pistol projectile/unlimited)
+x Implement shooting with default weapon (pistol projectile/unlimited)
 	- Animation
 - Player walk animation
 - Implement enemies

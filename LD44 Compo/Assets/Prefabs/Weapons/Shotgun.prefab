@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7393159299846278124}
   - component: {fileID: 7393159299846278127}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,14 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a492f03be36f4c44a7a6a927f834e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Pistol
-  range: 30
-  delayBetweenShotsSeconds: 0.5
-  projectileSpeed: 20
-  projectilesPerShot: 1
-  spreadRangeDegrees: 5
+  weaponName: Shotgun
+  range: 20
+  delayBetweenShotsSeconds: 0.7
+  projectileSpeed: 25
+  projectilesPerShot: 5
+  spreadRangeDegrees: 35
   damage: 1
-  defaultAmmoAmount: 2147483647
+  defaultAmmoAmount: 8
   ammoLeft: 0
   projectilePrefab: {fileID: 305161158615434116, guid: 2f52d9c4c1d4b4cc4aad4af91ed2a6e3,
     type: 3}
