@@ -76,12 +76,16 @@ x two-stick movement of player character
 x Top Down Character sprite (torso and legs, like in GTA1-GTA2)
 x Implement crimson-land-like controls
 x Implement shooting with default weapon (pistol projectile/unlimited)
-	- Animation
-- Player walk animation
+	x Animation
+x Player walk animation
 - Implement enemies
+- Enemy AI
+	- follows player when near him
+	- attack player when in fire range
+	- evades when player shoots
+	- wanders when far from player
 - Kill enemies
 - Bullet collision with walls
-- Enemy AI
 - Death animation 
 	- lack of oxygen
 	- shot

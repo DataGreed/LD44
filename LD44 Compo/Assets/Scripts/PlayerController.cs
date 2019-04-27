@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     {   
         // update speed based on movement input
         Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();   //TODO: move to start or init
 
         rb.velocity = moveDirection * speed;
 
