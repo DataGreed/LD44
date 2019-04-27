@@ -91,4 +91,12 @@ public class PlayerController : MonoBehaviour
         weaponToFire.Fire(shootingOriginPoint.position, GetMouseDirection());
 
     }
+
+    public bool Dead
+    {
+        get
+        {
+            return health <= 0;
+        }
+    }
 }

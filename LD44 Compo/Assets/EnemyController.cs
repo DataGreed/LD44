@@ -33,6 +33,9 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject player;
 
+    private Vector2 wanderDestination;
+    private float timeTillWanderDirectionChange=0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -72,13 +75,29 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                StopMoving();
+                //StopMoving();
+                //disable fire animatino
                 torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
+
                 //wander around aimlessly waiting for player
 
-                //TODO: wander around aimelessly 
-                //TODO: raycast randomly to check for furthest wall and go there
+                if (timeTillWanderDirectionChange <= 0)
+                {
+                    //check if time to change direction
+                    Quaternion randomDirection = Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward);
+                    wanderDestination = randomDirection * Vector2.up * 100; //has to be far
+
+                    timeTillWanderDirectionChange = Random.Range(0.8f, 1.5f);  
+                }
+
+                MoveTowardsPoint(wanderDestination);
+                LookTowardsPoint(wanderDestination);
+
+                timeTillWanderDirectionChange -= Time.deltaTime;
+
+                //TODO: raycast randomly to check for furthest wall and go there to prevent hitting walls
                 //TODO: randomly stop
+                //TODO: on wall collision randomly change wander direction
             }
         }
     }
@@ -181,6 +200,14 @@ public class EnemyController : MonoBehaviour
             }
 
             return false;
+        }
+    }
+
+    public bool Dead
+    {
+        get
+        {
+            return health <= 0;
         }
     }
 }
