@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = moveDirection * speed;
 
         //rotate towards mouse cursor
-        Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = GetMouseDirection();
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
         {
             Fire();
         }
+    }
+
+    Vector3 GetMouseDirection()
+    {
+        return (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position)).normalized;
     }
 
     void Fire()
@@ -41,7 +46,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //fire towards cursor
-        weaponToFire.Fire(transform.position, (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position)).normalized);
+        weaponToFire.Fire(transform.position, GetMouseDirection());
 
     }
 }
