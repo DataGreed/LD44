@@ -27,14 +27,14 @@
  - default amount of ammo
 - store	
 	- buying items
-	- weapons
-		- shotgun
-		- smg
-		- carabiner
-		- rifle
-	- ammo
-	- armor shards
-	- speed upgrade
+		- weapons
+			- shotgun
+			- smg
+			- carabiner
+			- rifle
+		- ammo
+		- armor shards
+		- speed upgrade
 	- selling items
 - player can have only two weapons at time (default unlimited pistol and other weapon)
 - minimum amount of oxygen is ensured, you cannot have less than 7 seconds of oxygen (last breath)
