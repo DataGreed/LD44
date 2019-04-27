@@ -70,6 +70,7 @@ public class EnemyController : MonoBehaviour
             else
             {
                 StopMoving();
+                torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
                 //wander around aimlessly waiting for player
 
                 //TODO: wander around aimelessly 
@@ -149,7 +150,23 @@ public class EnemyController : MonoBehaviour
     {
         get
         {
-            return Vector2.Distance(transform.position, player.transform.position) <= playerDetectionDistance;
+            bool withinDistance = Vector2.Distance(transform.position, player.transform.position) <= playerDetectionDistance;
+
+
+            if (withinDistance)
+            {
+                //cast a ray to player and see if it hits wall or player first
+                Vector2 dir = (player.transform.position - transform.position).normalized;
+
+                int layerMask = LayerMask.GetMask("Player", "Wall");
+
+                if (Physics2D.Raycast(transform.position, dir, Mathf.Infinity, layerMask).collider.tag == "Player")
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

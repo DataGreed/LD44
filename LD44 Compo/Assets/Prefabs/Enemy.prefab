@@ -41,7 +41,8 @@ GameObject:
   - component: {fileID: 1723375640453824400}
   - component: {fileID: 1723375640453824406}
   - component: {fileID: 540542805773839913}
-  m_Layer: 0
+  - component: {fileID: 2422154061845401086}
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -107,6 +108,22 @@ MonoBehaviour:
   shootingOriginPoint: {fileID: 1723375640252631485}
   torsoAnimator: {fileID: 1723375641112736004}
   legsAnimator: {fileID: 1723375641526843104}
+--- !u!58 &2422154061845401086
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723375640453824403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.9
 --- !u!1 &1723375641112736001
 GameObject:
   m_ObjectHideFlags: 0
