@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Enemy
+  - Wall
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1453187943
+    locked: 0
+  - name: OnTheFloor
+    uniqueID: 930122801
+    locked: 0
+  - name: Legs
+    uniqueID: 2026097063
+    locked: 0
+  - name: Walls
+    uniqueID: 2392283855
+    locked: 0
+  - name: Torsos
+    uniqueID: 1354100927
+    locked: 0
+  - name: Bullets
+    uniqueID: 1905718713
+    locked: 0
+  - name: Top
+    uniqueID: 849510841
     locked: 0

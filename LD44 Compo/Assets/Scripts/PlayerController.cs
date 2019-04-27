@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Animator legsAnimator;
 
     public const string FIRING_WEAPON_ANIMATION_PARAMETER= "firingWeapon";
+    public const string RUNNING_ANIMATION_PARAMETER = "running";
 
     void FixedUpdate()
     {   
@@ -25,16 +26,33 @@ public class PlayerController : MonoBehaviour
 
         //rotate towards mouse cursor
         Vector3 dir = GetMouseDirection();
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg -90;
+        torsoAnimator.gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
+        //fire if the fire button is pressed
         if(Input.GetButton("Fire1"))
         {
             Fire();
         }
         else
         {
+            //set torso animation to idle if not firing
             torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
+        }
+
+        //enable/disable running animation
+        // we compare to epsilon, not to zero, so we don't get any floating points errors
+        if (System.Math.Abs(moveDirection.x) > Mathf.Epsilon || System.Math.Abs(moveDirection.y) > Mathf.Epsilon)
+        {
+            legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, true);
+
+            //rotate legs in the direction of travel
+            float moveAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90;
+            legsAnimator.gameObject.transform.rotation = Quaternion.AngleAxis(moveAngle, Vector3.forward);
+        }
+        else
+        {
+            legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
         }
     }
 
