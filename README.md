@@ -9,7 +9,7 @@
 - You are an astronaut with limited oxygen. You are forced to fight in arena with foes (who may also have limited oxygen). You can buy upgrades and weapons for oxygen. Upgrades are depletable. You get oxygen by killing an enemy.
 
 # Scope
-- two-stick movement of player character
+x two-stick movement of player character
 - firing
 - HUD
  - oxygen left
@@ -49,6 +49,9 @@
 - enemies pathfinding (navagent?)
 - arena items
  - droppable oxygen tanks
+
+# Nice to have
+- graphic: tube connecting tanks to mask
 
 # Out of scope
 - gamepad controls

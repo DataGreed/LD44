@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed = 1.0f;
+    public Weapon primaryWeapon;
+    public Weapon secondaryWeapon;
 
     void FixedUpdate()
     {   
@@ -19,5 +21,27 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        if(Input.GetButton("Fire1"))
+        {
+            Fire();
+        }
+    }
+
+    void Fire()
+    {
+        Weapon weaponToFire = primaryWeapon;
+
+        if (secondaryWeapon)
+        {
+            if(secondaryWeapon.ammoLeft>0)
+            {
+                weaponToFire = secondaryWeapon;
+            }
+        }
+
+        //fire towards cursor
+        weaponToFire.Fire(transform.position, (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position)).normalized);
+
     }
 }
