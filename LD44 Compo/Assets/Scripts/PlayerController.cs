@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public const string FIRING_WEAPON_ANIMATION_PARAMETER= "firingWeapon";
     public const string RUNNING_ANIMATION_PARAMETER = "running";
 
+    public int health = 1;
+    public int armor = 1;
+
     void FixedUpdate()
     {   
         // update speed based on movement input

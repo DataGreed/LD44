@@ -78,17 +78,17 @@ x Implement crimson-land-like controls
 x Implement shooting with default weapon (pistol projectile/unlimited)
 	x Animation
 x Player walk animation
-- Implement enemies
+x Implement enemies
 - Enemy AI
-	- follows player when near him
-	- attack player when in fire range
+	x follows player when near him
+	x attack player when in fire range
 	- evades when player shoots
 	- wanders when far from player
-- Kill enemies
 - Bullet collision with walls
 - Death animation 
 	- lack of oxygen
 	- shot
+- Kill enemies
 - Hit animation
 	- blood splatter?
 - Oxygen depleting

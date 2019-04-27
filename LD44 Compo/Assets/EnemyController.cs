@@ -16,6 +16,9 @@ public class EnemyController : MonoBehaviour
 
     public float playerDetectionDistance = 40;
 
+    public int health = 1;
+    public int armor = 1;
+
     public Weapon primaryWeapon;    //don't use prefabs here, they won;t work.
     public Weapon secondaryWeapon;
     public Transform shootingOriginPoint;
@@ -124,11 +127,22 @@ public class EnemyController : MonoBehaviour
     {
         Vector3 dir = (targetPoint - (Vector2)transform.position).normalized;
         rb.velocity = dir * speed;
+
+        //enable running animation
+        legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, true);
+
+        //rotate legs in the direction of travel
+        float moveAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+        legsAnimator.gameObject.transform.rotation = Quaternion.AngleAxis(moveAngle, Vector3.forward);
+     
     }
 
     public void StopMoving()
     {
         rb.velocity = Vector2.zero;
+
+        //disable running animation
+        legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
     }
 
     public void LookTowardsPoint(Vector2 targetPoint)
