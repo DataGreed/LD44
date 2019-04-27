@@ -13,16 +13,21 @@ public class Projectile : MonoBehaviour
     bool shot = false;
 
     private Rigidbody2D rb;
+    Vector2 startPoint;
 
     /// <summary>
     /// Call to fire this projectile
     /// </summary>
     public void Fire()
     {
+        float angle = Mathf.Atan2(startingDirection.y, startingDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         //TODO: remember originating point to count distance travelled
+        startPoint = transform.position;
 
         //fire only if not fired yet
-        if(!shot)
+        if (!shot)
         {
             rb = GetComponent<Rigidbody2D>();
             rb.velocity = startingDirection * startingSpeed;
@@ -34,8 +39,13 @@ public class Projectile : MonoBehaviour
     {
         //TODO: detect collisions with enemies, deal damage and destroy
 
-        //TODO: destroy if travelled to far
 
         //TODO: detect collisions with level and destroy
+
+        //check if travelled to far and need to be destroyed
+        if (Vector2.Distance(this.transform.position, startPoint) >= range)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

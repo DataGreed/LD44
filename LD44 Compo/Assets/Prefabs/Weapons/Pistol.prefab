@@ -44,13 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Pistol
-  range: 10
+  range: 25
   delayBetweenShotsSeconds: 0.3
-  projectileSpeed: 3
+  projectileSpeed: 20
   projectilesPerShot: 1
   spreadRangeDegrees: 5
   damage: 1
-  defaultAmmoAmount: 999
+  defaultAmmoAmount: 2147483647
   ammoLeft: 0
   projectilePrefab: {fileID: 305161158615434116, guid: 2f52d9c4c1d4b4cc4aad4af91ed2a6e3,
     type: 3}

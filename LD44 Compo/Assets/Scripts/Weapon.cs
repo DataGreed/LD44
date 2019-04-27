@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
     public int defaultAmmoAmount;
 
     public int ammoLeft;
+    float waitTillNextShotSeconds=0;
 
     public Projectile projectilePrefab;
 
@@ -26,10 +27,14 @@ public class Weapon : MonoBehaviour
     public void Fire(Vector2 originPoint, Vector2 direction)
     {
         //can't fire if no ammo left
-        if (ammoLeft <= 0) return;
+        if (ammoLeft <= 0)
+        {
+            print("Can't shoot: no ammo left");
+            return;
+        }
 
-        //TODO:set timer to check rate of fire since last time fired
-
+        //check time since last shot
+        if(waitTillNextShotSeconds>0)return;
 
         //instantiate all needed projctiles and fire them
         for (int i = 0; i < projectilesPerShot; i++)
@@ -41,8 +46,10 @@ public class Weapon : MonoBehaviour
             projectile.damage = this.damage;
             projectile.range = this.range;
             projectile.startingSpeed = projectileSpeed;
-            //TODO: add spread angle
-            projectile.startingDirection = direction;
+            //get random spread angle
+            Quaternion spreadRotation = Quaternion.AngleAxis(Random.Range(-spreadRangeDegrees/2, spreadRangeDegrees / 2), Vector3.forward);
+            //apply spread to original direction
+            projectile.startingDirection = spreadRotation * direction;
             projectileGameObject.transform.position = originPoint;
 
             projectile.Fire();
@@ -50,5 +57,35 @@ public class Weapon : MonoBehaviour
 
         //deplete ammo
         ammoLeft--;
+
+        //set delay till next shot
+        waitTillNextShotSeconds += delayBetweenShotsSeconds;
     }
+
+    public void FixedUpdate()
+    {
+        if (waitTillNextShotSeconds > 0)
+        {
+            //advance the timer that ensures delay between shots
+            waitTillNextShotSeconds -= Time.deltaTime;
+            if (waitTillNextShotSeconds < 0) waitTillNextShotSeconds = 0;
+        }
+    }
+
+    public int Accuracy
+    {
+        get
+        {
+            return (int)(100 / this.spreadRangeDegrees);
+        }
+    }
+
+    public int RateOfFire
+    {
+        get
+        {
+            return (int)(1 / delayBetweenShotsSeconds);
+        }
+    }
+
 }

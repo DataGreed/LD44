@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed = 1.0f;
-    public Weapon primaryWeapon;
+    public Weapon primaryWeapon;    //don't use prefabs here, they won;t work.
     public Weapon secondaryWeapon;
 
     void FixedUpdate()
