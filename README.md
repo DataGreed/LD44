@@ -77,6 +77,8 @@ x Implement shooting with default weapon (pistol projectile/unlimited)
 	- Animation
 - Player walk animation
 - Implement enemies
+- Kill enemies
+- Enemy AI
 - Death animation 
 	- lack of oxygen
 	- shot
@@ -84,5 +86,13 @@ x Implement shooting with default weapon (pistol projectile/unlimited)
 - Oxygen tank sprite
 - Oxygen tank dropping from enemies
 - Oxygen tank pickup mechanic
-- Enemy AI
 - Armor mechanic
+- Store
+- Levels (10 max)
+- Intro
+	- reference LD and theme
+	- my info
+	- tell the story
+- Gameover (permadeath)
+- Game finale
+
