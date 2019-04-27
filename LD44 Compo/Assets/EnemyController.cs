@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,6 +46,11 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
 
+        if(Dead)
+        {
+            return;
+        }
+
         if (dodging)    //TODO: alert enemy when firing that he should dodge
         {
             //TODO: sidestep from vector between player and enemy
@@ -84,10 +90,10 @@ public class EnemyController : MonoBehaviour
                 if (timeTillWanderDirectionChange <= 0)
                 {
                     //check if time to change direction
-                    Quaternion randomDirection = Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward);
+                    Quaternion randomDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(0, 360), Vector3.forward);
                     wanderDestination = randomDirection * Vector2.up * 100; //has to be far
 
-                    timeTillWanderDirectionChange = Random.Range(0.8f, 1.5f);  
+                    timeTillWanderDirectionChange = UnityEngine.Random.Range(0.8f, 1.5f);  
                 }
 
                 MoveTowardsPoint(wanderDestination);
@@ -102,6 +108,29 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    internal void TakeDamage(int damage)
+    {
+        if (!Dead)
+        {
+
+            if (armor > 0)
+            {
+                armor -= damage;
+            }
+            else if (health > 0)
+            {
+                health -= damage;
+            }
+
+            if(Dead)
+            {
+                // TODO: death animation
+                print("Enemy died");
+
+                rb.velocity = Vector2.zero;
+            }
+        }
+    }
 
     void Fire(Vector2 targetPoint)
     {

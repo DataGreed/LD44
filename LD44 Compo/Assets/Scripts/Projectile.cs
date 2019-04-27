@@ -49,4 +49,22 @@ public class Projectile : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag=="Wall")
+        {
+            Destroy(this.gameObject);
+        }
+        else if(collision.tag=="Player")
+        {
+            collision.gameObject.GetComponent<PlayerController>().TakeDamage(this.damage);
+            Destroy(this.gameObject);
+        }
+        else if (collision.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyController>().TakeDamage(this.damage);
+            Destroy(this.gameObject);
+        }
+    }
 }

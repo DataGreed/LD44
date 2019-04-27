@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,11 +20,22 @@ public class PlayerController : MonoBehaviour
     public int health = 1;
     public int armor = 1;
 
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();   //TODO: move to start or init
+    }
+
     void FixedUpdate()
-    {   
+    {
+        if (Dead)
+        {
+            return;
+        }
+
         // update speed based on movement input
         Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();   //TODO: move to start or init
 
         rb.velocity = moveDirection * speed;
 
@@ -56,6 +68,30 @@ public class PlayerController : MonoBehaviour
         else
         {
             legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
+        }
+    }
+
+    internal void TakeDamage(int damage)
+    {
+        if (!Dead)
+        {
+
+            if (armor > 0)
+            {
+                armor -= damage;
+            }
+            else if (health > 0)
+            {
+                health -= damage;
+            }
+
+            if (Dead)
+            {
+                // TODO: death animation
+                print("Player died");
+                rb.velocity = Vector2.zero;
+                // TODO: game over
+            }
         }
     }
 
