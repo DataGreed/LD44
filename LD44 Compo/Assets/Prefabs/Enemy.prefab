@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c4f39f4b8a640169015ae4e5021807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 8
+  fireRangeCheckModifier: 0.8
+  playerDetectionDistance: 40
   primaryWeapon: {fileID: 5002766102592205007}
   secondaryWeapon: {fileID: 0}
   shootingOriginPoint: {fileID: 1723375640252631485}

@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
     /// will increase the chance of hitting a player
     /// </summary>
     public float fireRangeCheckModifier = 0.8f;
+
+    public float playerDetectionDistance = 40;
+
     public Weapon primaryWeapon;    //don't use prefabs here, they won;t work.
     public Weapon secondaryWeapon;
     public Transform shootingOriginPoint;
@@ -59,10 +62,14 @@ public class EnemyController : MonoBehaviour
                 {
                     //move towards player
                     MoveTowardsPoint(player.transform.position);
+
+                    //reset firing animation
+                    torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
                 }
             }
             else
             {
+                StopMoving();
                 //wander around aimlessly waiting for player
 
                 //TODO: wander around aimelessly 
@@ -114,7 +121,8 @@ public class EnemyController : MonoBehaviour
 
     public void MoveTowardsPoint(Vector2 targetPoint)
     {
-
+        Vector3 dir = (targetPoint - (Vector2)transform.position).normalized;
+        rb.velocity = dir * speed;
     }
 
     public void StopMoving()
@@ -133,8 +141,7 @@ public class EnemyController : MonoBehaviour
     {
         get
         {
-            //TODO: check distance between enemy and player
-            return true;
+            return Vector2.Distance(transform.position, player.transform.position) <= GetActiveWeapon().range * fireRangeCheckModifier;
         }
     }
 
@@ -142,8 +149,7 @@ public class EnemyController : MonoBehaviour
     {
         get
         {
-            //TODO: check distance between enemy and player
-            return true;
+            return Vector2.Distance(transform.position, player.transform.position) <= playerDetectionDistance;
         }
     }
 }
