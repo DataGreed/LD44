@@ -665,11 +665,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 540542805773839913, guid: 6ca9436a5368e46cbad6d11047e1d827,
-        type: 3}
-      propertyPath: fireRangeCheckModifier
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1723375640252631484, guid: 6ca9436a5368e46cbad6d11047e1d827,
         type: 3}
       propertyPath: m_Layer
@@ -926,6 +921,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723375641112736006, guid: 5f43d8cb4756a490697bc9470b21dc65,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723375641112736006, guid: 5f43d8cb4756a490697bc9470b21dc65,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723375641112736006, guid: 5f43d8cb4756a490697bc9470b21dc65,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723375641112736006, guid: 5f43d8cb4756a490697bc9470b21dc65,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f43d8cb4756a490697bc9470b21dc65, type: 3}

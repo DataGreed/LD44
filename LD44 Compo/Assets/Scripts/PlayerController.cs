@@ -89,7 +89,13 @@ public class PlayerController : MonoBehaviour
             {
                 // TODO: death animation
                 print("Player died");
+                //stop any movementmoving
                 rb.velocity = Vector2.zero;
+                //disable running animation
+                legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
+                //death animation
+                torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
+                torsoAnimator.SetBool("dead", true);
                 // TODO: game over
             }
         }

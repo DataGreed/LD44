@@ -101,8 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  fireRangeCheckModifier: 0.8
+  fireRangeCheckModifier: 0.95
   playerDetectionDistance: 40
+  health: 1
+  armor: 1
   primaryWeapon: {fileID: 5002766102592205007}
   secondaryWeapon: {fileID: 0}
   shootingOriginPoint: {fileID: 1723375640252631485}
