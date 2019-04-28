@@ -83,6 +83,8 @@ MonoBehaviour:
   shootingOriginPoint: {fileID: 1723375640252631485}
   torsoAnimator: {fileID: 1723375641112736004}
   legsAnimator: {fileID: 1723375641526843104}
+  health: 1
+  armor: 1
 --- !u!50 &1723375640453824406
 Rigidbody2D:
   serializedVersion: 4
@@ -103,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &7749787912303451389
 CircleCollider2D:
   m_ObjectHideFlags: 0
