@@ -9,6 +9,9 @@ public class GameStarter : MonoBehaviour
 
     public void StartGame()
     {
+
+        //TODO: reset player progress since it's a new game
+
         print($"Loading scene{SceneNameToLoad}");
         SceneManager.LoadScene(SceneNameToLoad);
     }

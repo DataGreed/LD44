@@ -51,6 +51,7 @@ x two-stick movement of player character
  - droppable oxygen tanks
 
 # Nice to have
+- game over reason
 - graphic: tube connecting tanks to mask
 - graphic: bullet collision with wall
 - graphic bullet disappear due to range
@@ -136,10 +137,10 @@ x HUD
 	- with smg
 	- with shotgun
 	- with with carbine
-- Intro
-	- reference LD and theme
-	- my info
-	- tell the story
+x Intro
+	x reference LD and theme
+	x my info
+	x tell the story
 - Game finale
 - sounds
  x fire
@@ -150,7 +151,7 @@ x HUD
  	- play sound
  - game over
  	- play sound
-x music
+- music
 	- play music on levels
 	- play music in intro
 	- play music in finale
