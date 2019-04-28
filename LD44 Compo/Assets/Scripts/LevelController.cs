@@ -11,12 +11,17 @@ public class LevelController : MonoBehaviour
 
     public GameObject HUD;
     public GameObject shop;
-    public GameObject levelWon;
-    public GameObject player;
-    public GameObject gameOver;
+    public GameObject levelWonUI;
+    public PlayerController player;
+    public GameObject gameOverUI;
 
     public int levelNumber;
     public int totalLevels = 9;
+
+    bool levelWon = false;
+    bool gameOver = false;
+
+    private List<EnemyController> enemies;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +38,8 @@ public class LevelController : MonoBehaviour
 
         //hide HUD
         HUD.SetActive(false);
-        gameOver.SetActive(false);
-        levelWon.SetActive(false);
+        gameOverUI.SetActive(false);
+        levelWonUI.SetActive(false);
         //show shop
         shop.SetActive(true);
 
@@ -56,8 +61,55 @@ public class LevelController : MonoBehaviour
 
     void Update()
     {
-        //TODO: check for win condition
-        //TODO: check for fail condition
+
+
+        if (!(gameOver || levelWon))
+        {
+            //check fail condition
+            if (player.Dead)
+            {
+                GameOver();
+            }
+        }
+
+
+        if (!(gameOver || levelWon))
+        {
+            //check win condition
+            int enemiesLeft = 999;  //so we won't win in case of possible initialization glitch
+
+            //TODO: update not every frame to optimize?
+            if (enemies == null)
+            {
+                GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
+                if (enemyObjects.Length > 0)
+                {
+                    enemies = new List<EnemyController>();
+                    for (int i = 0; i < enemyObjects.Length; i++)
+                    {
+                        enemies.Add(enemyObjects[i].GetComponent<EnemyController>());
+                    }
+                }
+            }
+            else
+            {
+                enemiesLeft = 0;
+                foreach (var item in enemies)
+                {
+                    if (!item.Dead)
+                    {
+                        enemiesLeft += 1;
+                    }
+                }
+            }
+
+
+            if (enemiesLeft <= 0)
+            {
+                WinLevel();
+            }
+        }
+
     }
 
     void WinLevel()
@@ -69,14 +121,15 @@ public class LevelController : MonoBehaviour
         //TODO: save player progress
 
         print("Level won!");
-        //TODO: show win overlay
+        levelWonUI.SetActive(true);
+        levelWon = true;
     }
 
     public void LoadNextLevel()
     {
         print("Loading next level");
         //TODO: refactor
-        string sceneName = sceneNamePrefix + "0" + levelNumber.ToString();
+        string sceneName = sceneNamePrefix + "0" + (levelNumber+1).ToString();
         print($"Loading scene{sceneName}");
         SceneManager.LoadScene(sceneName);
     }
@@ -90,6 +143,8 @@ public class LevelController : MonoBehaviour
     public void GameOver()
     {
         print("Game over");
+        gameOverUI.SetActive(true);
+        gameOver = true;
     }
 
     public int EnemiesLeft

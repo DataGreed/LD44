@@ -37,8 +37,6 @@ public class HUDController : MonoBehaviour
         }
         else
         {
-
-
             foreach (var item in enemies)
             {
                 if(!item.Dead)

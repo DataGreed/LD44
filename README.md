@@ -126,12 +126,12 @@ x HUD
 	- buy ammo
 	- sell ammo
 	- sell weapons
-- level changing
-	- loading screen? May be useful especially for web GL
+x level changing
+	x loading screen? May be useful especially for web GL
 - items persist through levels
 - Levels (10 max)
-	- level win condition (kill all enemies)
-	- Gameover (permadeath?)
+	x level win condition (kill all enemies)
+	x Gameover (permadeath?)
 - Enemy variations
 	- with rifle
 	- with smg
