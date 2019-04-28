@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: secondaryWeapon
       value: 
       objectReference: {fileID: 1412707063050928283}
+    - target: {fileID: 540542805773839913, guid: 6ca9436a5368e46cbad6d11047e1d827,
+        type: 3}
+      propertyPath: armor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1723375641112736006, guid: 6ca9436a5368e46cbad6d11047e1d827,
         type: 3}
       propertyPath: m_Color.r

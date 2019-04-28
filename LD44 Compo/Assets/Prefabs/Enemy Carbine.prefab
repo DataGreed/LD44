@@ -72,6 +72,16 @@ PrefabInstance:
       propertyPath: secondaryWeapon
       value: 
       objectReference: {fileID: 6078768295338870926}
+    - target: {fileID: 540542805773839913, guid: 6ca9436a5368e46cbad6d11047e1d827,
+        type: 3}
+      propertyPath: playerDetectionDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 540542805773839913, guid: 6ca9436a5368e46cbad6d11047e1d827,
+        type: 3}
+      propertyPath: armor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1723375641112736006, guid: 6ca9436a5368e46cbad6d11047e1d827,
         type: 3}
       propertyPath: m_Color.r
@@ -101,6 +111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559587131959553061, guid: 6ca9436a5368e46cbad6d11047e1d827,
+        type: 3}
+      propertyPath: defaultAmmoAmount
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ca9436a5368e46cbad6d11047e1d827, type: 3}

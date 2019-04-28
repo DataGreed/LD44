@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -417.34995}
+  m_AnchoredPosition: {x: 0, y: -417.3496}
   m_SizeDelta: {x: 752.6, y: 93.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &204803630
@@ -1116,6 +1116,101 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &385810843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385810844}
+  - component: {fileID: 385810847}
+  - component: {fileID: 385810846}
+  - component: {fileID: 385810845}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &385810844
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385810843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1379402497}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -7.9999757, y: -87}
+  m_SizeDelta: {x: 555.6999, y: -6.0999985}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &385810845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385810843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &385810846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385810843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 919186e6aaa964c128463cc9297e8b88, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: YOU EARNED BONUS OXYGEN
+--- !u!222 &385810847
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385810843}
+  m_CullTransparentMesh: 0
 --- !u!1 &391104042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,7 +3722,7 @@ RectTransform:
   m_Children:
   - {fileID: 391104043}
   m_Father: {fileID: 1379402497}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3924,6 +4019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345723228}
+  - component: {fileID: 1345723229}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -3951,6 +4047,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1345723229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345723227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6737fca8c52e046b5bd605cccb7f6550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1368324932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4074,6 +4182,7 @@ RectTransform:
   m_LocalScale: {x: 0.99999607, y: 0.99999607, z: 0.99999607}
   m_Children:
   - {fileID: 704466031}
+  - {fileID: 385810844}
   - {fileID: 1311384770}
   m_Father: {fileID: 2081980910}
   m_RootOrder: 3
@@ -4342,8 +4451,15 @@ MonoBehaviour:
   levelWonUI: {fileID: 1379402496}
   player: {fileID: 957643607}
   gameOverUI: {fileID: 376055816}
+  weaponPrefabs:
+  - {fileID: 7393159299846278127, guid: bc970a82fa253453b8d9b4869ca367d4, type: 3}
+  - {fileID: 7393159299846278127, guid: 0adc96b193a6b49c689b5940901eea71, type: 3}
+  - {fileID: 7393159299846278127, guid: 2460be52c2d4647c9839a8bd81ce98df, type: 3}
+  - {fileID: 7393159299846278127, guid: 9fad2ac1ce1ae4542acad9e40f4be0c6, type: 3}
   levelNumber: 0
   totalLevels: 9
+  minimumOxygen: 12
+  oxygenBonusForVictory: 5
 --- !u!4 &1548547226
 Transform:
   m_ObjectHideFlags: 0
@@ -6274,6 +6390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: secondaryWeapon
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723375640453824401, guid: 5f43d8cb4756a490697bc9470b21dc65,
+        type: 3}
+      propertyPath: oxygenSeconds
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1723375640252631484, guid: 5f43d8cb4756a490697bc9470b21dc65,
         type: 3}
