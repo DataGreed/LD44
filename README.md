@@ -56,7 +56,9 @@ x two-stick movement of player character
 - graphic bullet disappear due to range
 - enemy evades when player shoots (just randomly strafe when player shoots?)
 - Hit animation
-	- blood splatter?
+	- enemy: blood splatter?
+	- wall: sparks
+	- floor: same sparks?
 - enemy pushed back when killed
 - sound: death enemy
 - sound: player death due to lack of oxygen
@@ -138,9 +140,17 @@ x Armor mechanic
 - Game finale
 - sounds
  x fire
+ 	- play sound
  x hurt player
+ 	- play sound
  x hurt enemy
+ 	- play sound
  - game over
+ 	- play sound
 x music
+	- play music on levels
+	- play music in intro
+	- play music in finale
+	- play music in shop
  x some synthed beats? 
 
