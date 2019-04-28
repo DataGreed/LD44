@@ -54,12 +54,20 @@ x two-stick movement of player character
 - graphic: tube connecting tanks to mask
 - graphic: bullet collision with wall
 - graphic bullet disappear due to range
+- enemy evades when player shoots (just randomly strafe when player shoots?)
+- Hit animation
+	- blood splatter?
+- enemy pushed back when killed
 
 # Out of scope
 - gamepad controls
 - instant kill my shooting oxygen tank (explosion, enemy leaves no tank behind)
 - dynamic lighting
 - flamethrower
+- go to level exit when all enemies are killed to win
+- weapon icons
+	- in store
+	- in HUD
 
 
 # Name ideas
@@ -79,29 +87,56 @@ x Implement shooting with default weapon (pistol projectile/unlimited)
 	x Animation
 x Player walk animation
 x Implement enemies
-- Enemy AI
+x Enemy AI
 	x follows player when near him
 	x attack player when in fire range
-	- evades when player shoots (just randomly strafe when player shoots?)
 	x wanders when far from player
 x Bullet collision with walls
 x Death animation 
 	- lack of oxygen
 	x shot
 x Kill enemies
-- Hit animation
-	- blood splatter?
+- Sprites:
+	- floor
+	- heart for HUD
+	- armor for HUD	
+	- Oxygen tank sprite
 - Oxygen depleting
-- Oxygen tank sprite
 - Oxygen tank dropping from enemies
 - Oxygen tank pickup mechanic
 - Armor mechanic
 - Store
+	- buy weapons
+	- buy ammo
+	- sell ammo
+	- sell weapons
 - Levels (10 max)
+	- level win condition (kill all enemies)
+	- Gameover (permadeath?)
+- items persist through levels
+- Enemy variations
+	- with rifle
+	- with smg
+	- with shotgun
+	- with with carbine
+- HUD
+	- enemies left
+	- current weapon
+		- ammo left
+	- oxygen left (mins:seconds and bar?)
+	- hearts left
+	- armor left
 - Intro
 	- reference LD and theme
 	- my info
 	- tell the story
-- Gameover (permadeath)
 - Game finale
+- sounds
+ - fire
+ - hurt player
+ - hurt enemy
+ - death enemy
+ - game over: no oxygen
+- music
+ - some synthed beats?
 
