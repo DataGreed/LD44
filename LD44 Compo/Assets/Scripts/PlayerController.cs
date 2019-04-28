@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public int health = 1;
     public int armor = 1;
+    public float oxygenSeconds = 30;
 
     private Rigidbody2D rb;
 
