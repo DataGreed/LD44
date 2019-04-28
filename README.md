@@ -58,6 +58,8 @@ x two-stick movement of player character
 - Hit animation
 	- blood splatter?
 - enemy pushed back when killed
+- sound: death enemy
+- sound: player death due to lack of oxygen
 
 # Out of scope
 - gamepad controls
@@ -68,6 +70,7 @@ x two-stick movement of player character
 - weapon icons
 	- in store
 	- in HUD
+- lack of oxygen death animation variation
 
 
 # Name ideas
@@ -93,27 +96,28 @@ x Enemy AI
 	x wanders when far from player
 x Bullet collision with walls
 x Death animation 
-	- lack of oxygen
 	x shot
 x Kill enemies
 - Sprites:
-	- floor
-	- heart for HUD
-	- armor for HUD	
+	x floor
+	x heart for HUD
+	x armor for HUD	
 	- Oxygen tank sprite
 - Oxygen depleting
 - Oxygen tank dropping from enemies
 - Oxygen tank pickup mechanic
-- Armor mechanic
+x Armor mechanic
 - Store
 	- buy weapons
 	- buy ammo
 	- sell ammo
 	- sell weapons
+- level changing
+	- loading screen? May be useful especially for web GL
+- items persist through levels
 - Levels (10 max)
 	- level win condition (kill all enemies)
 	- Gameover (permadeath?)
-- items persist through levels
 - Enemy variations
 	- with rifle
 	- with smg
@@ -132,11 +136,10 @@ x Kill enemies
 	- tell the story
 - Game finale
 - sounds
- - fire
- - hurt player
- - hurt enemy
- - death enemy
- - game over: no oxygen
-- music
- - some synthed beats?
+ x fire
+ x hurt player
+ x hurt enemy
+ - game over
+x music
+ x some synthed beats? 
 
