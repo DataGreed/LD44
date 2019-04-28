@@ -2,6 +2,8 @@
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
 <project xmlns="http://audacity.sourceforge.net/xml/" projname="Shot02_data" version="1.3.0" audacityversion="2.3.1" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="4756.4453125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags>
+		<tag name="ALBUM" value="Ludum Dare 44 "/>
+		<tag name="ARTIST" value="Alexey &quot;DataGreed&quot; Strelkov"/>
 		<tag name="COMMENTS" value=" 00000000 00000210 00000706 0000000000001AEA 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000"/>
 		<tag name="Software" value="GarageBand 10.2.0"/>
 	</tags>

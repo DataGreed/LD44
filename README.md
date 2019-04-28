@@ -98,15 +98,23 @@ x Bullet collision with walls
 x Death animation 
 	x shot
 x Kill enemies
-- Sprites:
+x Sprites:
 	x floor
 	x heart for HUD
 	x armor for HUD	
-	- Oxygen tank sprite
+	x Oxygen tank sprite
 - Oxygen depleting
 - Oxygen tank dropping from enemies
 - Oxygen tank pickup mechanic
 x Armor mechanic
+- HUD
+	x find pixelated free-to-use font
+	- enemies left
+	- current weapon
+		- ammo left
+	- oxygen left (mins:seconds and bar?)
+	- hearts left
+	- armor left
 - Store
 	- buy weapons
 	- buy ammo
@@ -123,14 +131,6 @@ x Armor mechanic
 	- with smg
 	- with shotgun
 	- with with carbine
-- HUD
-	x find pixelated free-to-use font
-	- enemies left
-	- current weapon
-		- ammo left
-	- oxygen left (mins:seconds and bar?)
-	- hearts left
-	- armor left
 - Intro
 	- reference LD and theme
 	- my info
