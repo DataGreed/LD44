@@ -82,13 +82,13 @@ x Implement enemies
 - Enemy AI
 	x follows player when near him
 	x attack player when in fire range
-	- evades when player shoots
-	- wanders when far from player
-- Bullet collision with walls
-- Death animation 
+	- evades when player shoots (just randomly strafe when player shoots?)
+	x wanders when far from player
+x Bullet collision with walls
+x Death animation 
 	- lack of oxygen
-	- shot
-- Kill enemies
+	x shot
+x Kill enemies
 - Hit animation
 	- blood splatter?
 - Oxygen depleting
