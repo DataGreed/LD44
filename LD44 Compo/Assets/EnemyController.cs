@@ -20,12 +20,15 @@ public class EnemyController : MonoBehaviour
     public int health = 1;
     public int armor = 1;
 
+    public GameObject dropsWhenDeadPrefab;
+
     public Weapon primaryWeapon;    //don't use prefabs here, they won;t work.
     public Weapon secondaryWeapon;
     public Transform shootingOriginPoint;
 
     public Animator torsoAnimator;
     public Animator legsAnimator;
+
 
     public const string FIRING_WEAPON_ANIMATION_PARAMETER = "firingWeapon";
     public const string RUNNING_ANIMATION_PARAMETER = "running";
@@ -124,7 +127,7 @@ public class EnemyController : MonoBehaviour
 
             if (Dead)
             {
-                // TODO: death animation
+
                 print("Enemy died");
                 //stop from moving
                 rb.velocity = Vector2.zero;
@@ -136,6 +139,12 @@ public class EnemyController : MonoBehaviour
 
                 //let projectiles pass through
                 GetComponent<Collider2D>().enabled = false;
+
+                //drop item
+                if(dropsWhenDeadPrefab)
+                {
+                    dropItem();
+                }
             }
         }
 
@@ -247,5 +256,11 @@ public class EnemyController : MonoBehaviour
         {
             return health <= 0;
         }
+    }
+
+    private void dropItem()
+    {
+        GameObject item = Instantiate(dropsWhenDeadPrefab);
+        item.transform.position = transform.position;
     }
 }

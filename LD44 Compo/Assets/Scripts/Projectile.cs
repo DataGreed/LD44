@@ -37,12 +37,7 @@ public class Projectile : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-        //TODO: detect collisions with enemies, deal damage and destroy
-
-
-        //TODO: detect collisions with level and destroy
-
+    {    
         //check if travelled to far and need to be destroyed
         if (Vector2.Distance(this.transform.position, startPoint) >= range)
         {

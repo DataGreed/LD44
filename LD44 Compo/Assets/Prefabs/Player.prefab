@@ -85,6 +85,7 @@ MonoBehaviour:
   legsAnimator: {fileID: 1723375641526843104}
   health: 1
   armor: 1
+  oxygenSeconds: 15
 --- !u!50 &1723375640453824406
 Rigidbody2D:
   serializedVersion: 4

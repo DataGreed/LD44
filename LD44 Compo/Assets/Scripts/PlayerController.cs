@@ -32,6 +32,19 @@ public class PlayerController : MonoBehaviour
     {
         if (Dead)
         {
+            //rb.velocity = Vector2.zero;
+            //legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
+            return;
+        }
+
+        //deplete oxygen
+        oxygenSeconds -= Time.deltaTime;
+
+        if (oxygenSeconds<=0)
+        {
+            health = 0;
+            Die();
+            oxygenSeconds = 0;
             return;
         }
 
@@ -88,18 +101,23 @@ public class PlayerController : MonoBehaviour
 
             if (Dead)
             {
-                // TODO: death animation
-                print("Player died");
-                //stop any movementmoving
-                rb.velocity = Vector2.zero;
-                //disable running animation
-                legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
-                //death animation
-                torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
-                torsoAnimator.SetBool("dead", true);
-                // TODO: game over
+                Die();
             }
         }
+    }
+
+    void Die()
+    {
+        // TODO: death animation
+        print("Player died");
+        //stop any movementmoving
+        rb.velocity = Vector2.zero;
+        //disable running animation
+        legsAnimator.SetBool(RUNNING_ANIMATION_PARAMETER, false);
+        //death animation
+        torsoAnimator.SetInteger(FIRING_WEAPON_ANIMATION_PARAMETER, 0);
+        torsoAnimator.SetBool("dead", true);
+        // TODO: game over
     }
 
     Vector3 GetMouseDirection()

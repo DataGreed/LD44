@@ -105,6 +105,8 @@ MonoBehaviour:
   playerDetectionDistance: 40
   health: 1
   armor: 1
+  dropsWhenDeadPrefab: {fileID: 913885970630225861, guid: a94b34eced2a94f5ab140898a65dc1b5,
+    type: 3}
   primaryWeapon: {fileID: 5002766102592205007}
   secondaryWeapon: {fileID: 0}
   shootingOriginPoint: {fileID: 1723375640252631485}

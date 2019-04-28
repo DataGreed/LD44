@@ -107,10 +107,10 @@ x Sprites:
 	x heart for HUD
 	x armor for HUD	
 	x Oxygen tank sprite
-- Oxygen depleting
-	- player dies without oxygen
-- Oxygen tank dropping from enemies
-- Oxygen tank pickup mechanic
+x Oxygen depleting
+	x player dies without oxygen
+x Oxygen tank dropping from enemies
+x Oxygen tank pickup mechanic
 x Armor mechanic
 x HUD
 	x find pixelated free-to-use font
