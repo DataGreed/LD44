@@ -62,6 +62,8 @@ x two-stick movement of player character
 - enemy pushed back when killed
 - sound: death enemy
 - sound: player death due to lack of oxygen
+- hud: oxygen left turns red when less than 10 seconds of oxygen
+- screen flashes red when hit
 
 # Out of scope
 - gamepad controls
