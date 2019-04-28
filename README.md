@@ -109,14 +109,14 @@ x Sprites:
 - Oxygen tank dropping from enemies
 - Oxygen tank pickup mechanic
 x Armor mechanic
-- HUD
+x HUD
 	x find pixelated free-to-use font
 	- enemies left
-	- current weapon
-		- ammo left
-	- oxygen left (mins:seconds and bar?)
-	- hearts left
-	- armor left
+	x current weapon
+		x ammo left
+	x oxygen left (mins:seconds and bar?)
+	x hearts left
+	x armor left
 - Store
 	- buy weapons
 	- buy ammo

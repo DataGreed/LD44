@@ -213,7 +213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22, y: 72.95}
+  m_AnchoredPosition: {x: 22, y: 72.950195}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &128216709
@@ -1124,8 +1124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22, y: 33.77}
-  m_SizeDelta: {x: 265.44, y: 30}
+  m_AnchoredPosition: {x: 22, y: 33.76953}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &856036029
 MonoBehaviour:
@@ -1388,6 +1388,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1723375641022816578}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &957643607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1723375640453824401, guid: 5f43d8cb4756a490697bc9470b21dc65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1723375641022816578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957643604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c77dfc3eecf4930878222538096ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067792848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,8 +1514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22, y: 10.359985}
-  m_SizeDelta: {x: 265.44, y: 30}
+  m_AnchoredPosition: {x: 22, y: 10.360352}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1340471086
 MonoBehaviour:
@@ -1933,7 +1945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 70, y: 72.95001}
+  m_AnchoredPosition: {x: 70, y: 72.950195}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1908983889
@@ -2000,6 +2012,7 @@ GameObject:
   - component: {fileID: 2081980909}
   - component: {fileID: 2081980908}
   - component: {fileID: 2081980907}
+  - component: {fileID: 2081980911}
   m_Layer: 5
   m_Name: HUD Canvas
   m_TagString: Untagged
@@ -2090,6 +2103,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2081980911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081980906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e637bdf6f2046faa688f2c695a049a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 957643607}
+  oxygenText: {fileID: 856036030}
+  weaponText: {fileID: 1340471086}
+  heartImage: {fileID: 128216710}
+  armorImage: {fileID: 1908983890}
 --- !u!1001 &1723375641022816578
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
+        //TODO: refactor to use GetActiveWeapon;
         Weapon weaponToFire = primaryWeapon;
 
         if (secondaryWeapon)
@@ -141,5 +142,20 @@ public class PlayerController : MonoBehaviour
         {
             return health <= 0;
         }
+    }
+
+    public Weapon GetActiveWeapon()
+    {
+        Weapon weaponToFire = primaryWeapon;
+
+        if (secondaryWeapon)
+        {
+            if (secondaryWeapon.ammoLeft > 0)
+            {
+                weaponToFire = secondaryWeapon;
+            }
+        }
+
+        return weaponToFire;
     }
 }
