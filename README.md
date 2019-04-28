@@ -124,6 +124,7 @@ x Armor mechanic
 	- with shotgun
 	- with with carbine
 - HUD
+	x find pixelated free-to-use font
 	- enemies left
 	- current weapon
 		- ammo left
