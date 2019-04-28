@@ -2470,18 +2470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2460be52c2d4647c9839a8bd81ce98df, type: 3}
---- !u!114 &740117561 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7393159299846278127, guid: bc970a82fa253453b8d9b4869ca367d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1824637324}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a492f03be36f4c44a7a6a927f834e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &743507550
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,7 +6274,7 @@ PrefabInstance:
         type: 3}
       propertyPath: secondaryWeapon
       value: 
-      objectReference: {fileID: 740117561}
+      objectReference: {fileID: 0}
     - target: {fileID: 1723375640252631484, guid: 5f43d8cb4756a490697bc9470b21dc65,
         type: 3}
       propertyPath: m_Layer

@@ -10,7 +10,15 @@ public class GameStarter : MonoBehaviour
     public void StartGame()
     {
 
-        //TODO: reset player progress since it's a new game
+        //Reset allplayer progress since it's a new game
+        PlayerPrefs.DeleteAll();
+
+        //TODO: refactor and save keys somewhere
+        PlayerPrefs.SetInt("ox", 20);   //oxygen
+        PlayerPrefs.SetInt("he", 1);    //health
+        PlayerPrefs.SetInt("ar", 1);    //armor
+        PlayerPrefs.SetInt("am", 0);    //ammo
+        PlayerPrefs.SetString("we", "");    //secondary weapon name
 
         print($"Loading scene{SceneNameToLoad}");
         SceneManager.LoadScene(SceneNameToLoad);

@@ -15,8 +15,13 @@ public class LevelController : MonoBehaviour
     public PlayerController player;
     public GameObject gameOverUI;
 
+    public Weapon[] weaponPrefabs;
+
     public int levelNumber;
     public int totalLevels = 9;
+
+    public float minimumOxygen = 12;
+    public float oxygenBonusForVictory = 5; //same as in last tank
 
     bool levelWon = false;
     bool gameOver = false;
@@ -29,12 +34,36 @@ public class LevelController : MonoBehaviour
         //stop time
         Time.timeScale = 0;
 
-        //load player data (health, oxygen, armor, weapon, ammo
-        //TODO: load player data (playerprefs? singleton?)
+        //load player data preserved between levels 
+        //(health, oxygen, armor, weapon, ammo)
+        player.oxygenSeconds = PlayerPrefs.GetInt("ox", (int)minimumOxygen);   //oxygen
+        if(player.oxygenSeconds<minimumOxygen)
+        {
+            player.oxygenSeconds = minimumOxygen;
+        }
+        player.health = PlayerPrefs.GetInt("he", 1);    //health
+        player.armor = PlayerPrefs.GetInt("ar", 0);    //armor
 
-        //give player everything he has
-        //TODO: give player everything that's needed
-        //TODO: ensure minimum level of oxygen
+        string weaponName = PlayerPrefs.GetString("we", "");    //secondary weapon name
+
+        if(weaponName.Length>0)
+        {
+            foreach (var item in weaponPrefabs)
+            {
+                if(weaponName==item.weaponName)
+                {
+                    player.secondaryWeapon = Instantiate(item);
+                    player.secondaryWeapon.ammoLeft = PlayerPrefs.GetInt("am", 0);    //ammo
+
+                    break;
+                }
+            }
+
+            if(player.secondaryWeapon==null)
+            {
+                print($"Could not find player weapon from prefs:{weaponName}");
+            }
+        }
 
         //hide HUD
         HUD.SetActive(false);
@@ -114,11 +143,20 @@ public class LevelController : MonoBehaviour
 
     void WinLevel()
     {
+        //give bonus for victory
+        player.oxygenSeconds += oxygenBonusForVictory;
         //stop time
         Time.timeScale = 0; //so oxygen will stop depleting
 
         //save player progress
-        //TODO: save player progress
+        PlayerPrefs.SetInt("ox", (int)Mathf.Ceil(player.oxygenSeconds));   //oxygen
+        PlayerPrefs.SetInt("he", player.health);    //health
+        PlayerPrefs.SetInt("ar", player.armor);    //armor
+        if (player.secondaryWeapon)
+        {
+            PlayerPrefs.SetString("we", player.secondaryWeapon.name);    //secondary weapon name
+            PlayerPrefs.SetInt("am", player.secondaryWeapon.ammoLeft);    //ammo
+        }
 
         print("Level won!");
         levelWonUI.SetActive(true);

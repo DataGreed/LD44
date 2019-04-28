@@ -84,7 +84,7 @@ MonoBehaviour:
   torsoAnimator: {fileID: 1723375641112736004}
   legsAnimator: {fileID: 1723375641526843104}
   health: 1
-  armor: 1
+  armor: 0
   oxygenSeconds: 15
 --- !u!50 &1723375640453824406
 Rigidbody2D:
