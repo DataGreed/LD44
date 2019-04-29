@@ -1,7 +1,7 @@
 # LD44: Till Breath Do us Part Game
-[Ludum dare page](https://ldjam.com/events/ludum-dare/44/$143743)
-[datagreed.pro project page](http://datagreed.pro/projects/breathapart/index.html)
-[Ludum Dare 44 Theme](https://ldjam.com/events/ludum-dare/44): Your life is currency
+- [Ludum dare page](https://ldjam.com/events/ludum-dare/44/$143743)
+- [datagreed.pro project page](http://datagreed.pro/projects/breathapart/index.html)
+- [Ludum Dare 44 Theme](https://ldjam.com/events/ludum-dare/44): Your life is currency
 
 # Ideas
 - Bullet hell arena where you can exchange your hearts for weapon upgrades
