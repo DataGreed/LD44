@@ -44,7 +44,7 @@ public class LevelController : MonoBehaviour
         player.health = PlayerPrefs.GetInt("he", 1);    //health
         player.armor = PlayerPrefs.GetInt("ar", 0);    //armor
 
-        string weaponName = PlayerPrefs.GetString("we", "SMG");    //secondary weapon name
+        string weaponName = PlayerPrefs.GetString("we", "");    //secondary weapon name
 
         if(weaponName.Length>0)
         {
