@@ -51,6 +51,7 @@ MonoBehaviour:
   spreadRangeDegrees: 35
   damage: 1
   defaultAmmoAmount: 8
+  price: 11
   ammoLeft: 0
   projectilePrefab: {fileID: 305161158615434116, guid: 2f52d9c4c1d4b4cc4aad4af91ed2a6e3,
     type: 3}

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a492f03be36f4c44a7a6a927f834e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Carbine
+  weaponName: Rifle
   range: 50
   delayBetweenShotsSeconds: 1
   projectileSpeed: 40
@@ -51,6 +51,7 @@ MonoBehaviour:
   spreadRangeDegrees: 1
   damage: 2
   defaultAmmoAmount: 4
+  price: 17
   ammoLeft: 0
   projectilePrefab: {fileID: 6824434306122526265, guid: 471be8bbf1b77410b83562d2b07d0b5c,
     type: 3}

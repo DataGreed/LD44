@@ -13,6 +13,8 @@ public class Weapon : MonoBehaviour
     public int damage;
     public int defaultAmmoAmount;
 
+    public int price;
+
     public int ammoLeft;
     float waitTillNextShotSeconds=0;
 

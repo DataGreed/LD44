@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 204803631}
   - component: {fileID: 204803630}
   m_Layer: 5
-  m_Name: Text
+  m_Name: battle title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -900,8 +900,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548547225}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1345723229}
+        m_MethodName: SellSecondaryWeapon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1007,7 +1007,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1029,8 +1029,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548547225}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1345723229}
+        m_MethodName: BuySMG
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1432,7 +1432,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1454,8 +1454,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548547225}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1345723229}
+        m_MethodName: BuyRifle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1822,7 +1822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &536105943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3319,7 +3319,7 @@ GameObject:
   - component: {fileID: 946710731}
   - component: {fileID: 946710730}
   m_Layer: 5
-  m_Name: title left (1)
+  m_Name: pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3608,7 +3608,7 @@ GameObject:
   - component: {fileID: 1169441038}
   - component: {fileID: 1169441037}
   m_Layer: 5
-  m_Name: title left (4)
+  m_Name: shop title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4026,7 +4026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1345723228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4059,6 +4059,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6737fca8c52e046b5bd605cccb7f6550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimumOxygen: 12
+  armorPrice: 5
+  player: {fileID: 957643607}
+  shotgunPrefab: {fileID: 7393159299846278127, guid: 0adc96b193a6b49c689b5940901eea71,
+    type: 3}
+  smgPrefab: {fileID: 7393159299846278127, guid: 2460be52c2d4647c9839a8bd81ce98df,
+    type: 3}
+  carbinePrefab: {fileID: 7393159299846278127, guid: bc970a82fa253453b8d9b4869ca367d4,
+    type: 3}
+  riflePrefab: {fileID: 7393159299846278127, guid: 9fad2ac1ce1ae4542acad9e40f4be0c6,
+    type: 3}
+  title: {fileID: 204803631}
+  playerOxygenText: {fileID: 1661853890}
+  playerSpendableOxygenText: {fileID: 1964981694}
+  armorText: {fileID: 1822846479}
+  playerSecondaryWeaponText: {fileID: 1728406990}
+  sellWeaponButton: {fileID: 362662546}
+  shotgunText: {fileID: 540198652}
+  shotgunBuyButton: {fileID: 1554189140}
+  smgText: {fileID: 1979271349}
+  smgBuyButton: {fileID: 365074779}
+  carbineText: {fileID: 1368324935}
+  carbineBuyButton: {fileID: 1775867533}
+  rifleText: {fileID: 810096172}
+  rifleBuyButton: {fileID: 405449518}
+  armorBuyButton: {fileID: 2107165738}
 --- !u!1 &1368324932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,7 +4557,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4553,8 +4579,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548547225}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1345723229}
+        m_MethodName: BuyShotgun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5179,7 +5205,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5201,8 +5227,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548547225}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1345723229}
+        m_MethodName: BuyCarbine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5264,7 +5290,7 @@ GameObject:
   - component: {fileID: 1822846479}
   - component: {fileID: 1822846478}
   m_Layer: 5
-  m_Name: armor
+  m_Name: armor on player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6242,7 +6268,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -6264,8 +6290,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548547225}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1345723229}
+        m_MethodName: BuyArmor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

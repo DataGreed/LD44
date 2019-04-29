@@ -21,7 +21,7 @@ public class LevelController : MonoBehaviour
     public int totalLevels = 9;
 
     public float minimumOxygen = 12;
-    public float oxygenBonusForVictory = 5; //same as in last tank
+    public float oxygenBonusForVictory = 5; //same as in last tank. Use to balance
 
     bool levelWon = false;
     bool gameOver = false;
@@ -44,7 +44,7 @@ public class LevelController : MonoBehaviour
         player.health = PlayerPrefs.GetInt("he", 1);    //health
         player.armor = PlayerPrefs.GetInt("ar", 0);    //armor
 
-        string weaponName = PlayerPrefs.GetString("we", "");    //secondary weapon name
+        string weaponName = PlayerPrefs.GetString("we", "SMG");    //secondary weapon name
 
         if(weaponName.Length>0)
         {
@@ -154,7 +154,7 @@ public class LevelController : MonoBehaviour
         PlayerPrefs.SetInt("ar", player.armor);    //armor
         if (player.secondaryWeapon)
         {
-            PlayerPrefs.SetString("we", player.secondaryWeapon.name);    //secondary weapon name
+            PlayerPrefs.SetString("we", player.secondaryWeapon.weaponName);    //secondary weapon name
             PlayerPrefs.SetInt("am", player.secondaryWeapon.ammoLeft);    //ammo
         }
 
