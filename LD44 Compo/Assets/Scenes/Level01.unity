@@ -4801,7 +4801,7 @@ MonoBehaviour:
   levelNumber: 0
   totalLevels: 9
   minimumOxygen: 12
-  oxygenBonusForVictory: 5
+  oxygenBonusForVictory: 6
 --- !u!4 &1548547226
 Transform:
   m_ObjectHideFlags: 0

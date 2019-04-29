@@ -157,6 +157,11 @@ public class LevelController : MonoBehaviour
             PlayerPrefs.SetString("we", player.secondaryWeapon.weaponName);    //secondary weapon name
             PlayerPrefs.SetInt("am", player.secondaryWeapon.ammoLeft);    //ammo
         }
+        else
+        {
+            PlayerPrefs.SetString("we", "");    //secondary weapon name
+            PlayerPrefs.SetInt("am", 0);    //ammo
+        }
 
         print("Level won!");
         levelWonUI.SetActive(true);
