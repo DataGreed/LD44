@@ -16,7 +16,7 @@ public class GameStarter : MonoBehaviour
         //TODO: refactor and save keys somewhere
         PlayerPrefs.SetInt("ox", 20);   //oxygen
         PlayerPrefs.SetInt("he", 1);    //health
-        PlayerPrefs.SetInt("ar", 1);    //armor
+        PlayerPrefs.SetInt("ar", 0);    //armor
         PlayerPrefs.SetInt("am", 0);    //ammo
         PlayerPrefs.SetString("we", "");    //secondary weapon name
 

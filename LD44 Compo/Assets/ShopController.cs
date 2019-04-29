@@ -50,7 +50,7 @@ public class ShopController : MonoBehaviour
         //set title
         string sceneName = SceneManager.GetActiveScene().name;
         string battleNumber = sceneName[sceneName.Length - 1].ToString();   //TODO: will break if more than 9
-        title.text = $"BATTLE {battleNumber} out of 9"; //TODO: get real number of battles
+        title.text = $"BATTLE {battleNumber} out of 8"; //TODO: get real number of battles
 
         //update default ammo amount and weapon names once
         shotgunText.text = $"{shotgunPrefab.weaponName.ToUpper()} (AMMO: {shotgunPrefab.defaultAmmoAmount})";

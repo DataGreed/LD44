@@ -121,11 +121,11 @@ x HUD
 	x oxygen left (mins:seconds and bar?)
 	x hearts left
 	x armor left
-- Store
-	- buy weapons
-	- buy ammo
-	- sell ammo
-	- sell weapons
+x Store
+	x buy weapons
+	x buy ammo
+	x sell ammo
+	x sell weapons
 x level changing
 	x loading screen? May be useful especially for web GL
 - items persist through levels
