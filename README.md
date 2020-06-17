@@ -3,9 +3,9 @@
 - [datagreed.pro project page](http://datagreed.pro/projects/breathapart/index.html)
 - [Ludum Dare 44 Theme](https://ldjam.com/events/ludum-dare/44): Your life is currency
 
-[MORE GAMES](http://datagreed.pro/)
+**[More Games]**(http://datagreed.pro/)
 
-[UNITY ASSETS](https://assetstore.unity.com/publishers/42047)
+**[My Unity Assets]**(https://assetstore.unity.com/publishers/42047)
 
 # Ideas
 - Bullet hell arena where you can exchange your hearts for weapon upgrades
